@@ -125,16 +125,24 @@ export default function WorkshopCard({ setModalControl }) {
         </h2>
         <div className="flex items-center justify-center py-1 gap-1">
           <p className="text-[#00B6C1] font-medium font-inter">Dates: </p>
-          <p className="text-[#303030] font-medium font-inter">30th January, 2025</p>
+          <p className="text-[#303030] font-medium font-inter">
+            30th January, 2025
+          </p>
         </div>
         <div className="flex items-center justify-center py-1 gap-1">
           <p className="text-[#00B6C1] font-medium font-inter">Time: </p>
-          <p className="text-[#303030] font-medium font-inter">10:30 a.m. to 12:30 p.m.</p>
+          <p className="text-[#303030] font-medium font-inter">
+            10:30 a.m. to 12:30 p.m.
+          </p>
         </div>
-        <div className="border-[#0095A8] border-2 mx-4 rounded-lg my-2 shadow-lg">
-          <div className="flex items-center justify-center py-1 gap-1">
-            <p className="text-[#00B6C1] font-medium font-inter">Venue Partner: </p>
-            <p className="text-[#303030] font-medium font-inter">'B Hub, Burjuman'</p>
+        <div className="border-[#0095A8] border-2 mx-4 py-1.5 rounded-lg my-2 shadow-lg">
+          <div className="flex items-center justify-center gap-1">
+            <p className="text-[#00B6C1] font-medium font-inter">
+              Venue Partner:{" "}
+            </p>
+            <p className="text-[#303030] font-medium font-inter">
+              'B Hub, Burjuman'
+            </p>
           </div>
 
           <img
@@ -145,15 +153,13 @@ export default function WorkshopCard({ setModalControl }) {
           />
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="flex justify-center m-3">
-          <button
-            className="bg-[#E6A200] rounded-lg text-[#FFFFFF] font-inter text-xl px-4 py-1 font-semibold font-inter"
-            onClick={() => setModalControl(true)}
-          >
-            Register Now
-          </button>
-        </div>
+      <div className="flex justify-center m-3 mt-4">
+        <button
+          className="bg-[#E6A200] rounded-lg text-[#FFFFFF] font-inter text-xl px-4 pt-1 pb-2 font-semibold font-inter"
+          onClick={() => setModalControl(true)}
+        >
+          Register Now
+        </button>
       </div>
       {/* <p className="font-medium mt-2 text-black text-center">
         For more details contact Ritu:
