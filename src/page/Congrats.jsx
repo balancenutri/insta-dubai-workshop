@@ -55,7 +55,7 @@ function App() {
               </div>
               <div>
                 <p className="md:text-base text-gray-800 font-semibold">
-                B Hub, Burjuman, Dubai
+                B Hub, BurJuman, Dubai
                 </p>
               </div>
             </div>
