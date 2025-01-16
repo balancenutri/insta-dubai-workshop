@@ -52,7 +52,7 @@ export default function WorkshopCard({ setModalControl }) {
         </div>
       </div>
       <div>
-        <h2 className="text-center italic text-base font-inter font-semibold mt-4 text-white bg-[#221800] -mx-4">
+        <h2 className="text-center italic text-[17px] font-inter font-semibold mt-4 text-white bg-[#221800] -mx-4">
           Free Wellness Webinar & Workshop
         </h2>
         <div className="flex items-center justify-center py-1 gap-1">
@@ -95,7 +95,7 @@ export default function WorkshopCard({ setModalControl }) {
       </div>
 
 
-      <p className="text-gray-800 text-center font-inter text-sm font-medium italic">
+      <p className="text-gray-800 text-center font-inter text-[13px] font-medium italic">
         No charges for the event. Refreshments will be provided*
       </p>
     </div>
