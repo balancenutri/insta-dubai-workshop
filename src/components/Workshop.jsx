@@ -43,10 +43,8 @@ export default function WorkshopCard({ setModalControl }) {
         <div className="rounded-lg bg-yellow-50 py-4 border-2 shadow-lg">
           <p className="text-gray-800 font-inter text-[13px] font-medium px-4">
             <span className="text-gray-800 text-center font-inter text-[15px] font-bold ">
-              Meet Dietitian Khyati Rupani,
-            </span>{" "}
-            Ex-Chief Dietitian at Lilavati Hospital. She is an Award- Winning
-            Dietitian who has lost 40kg herself.
+             Meet Khyati Rupani,
+            </span>{" "}Ex-Chief Dietitian at Lilavati Hospital. She is an Award-Winning nutritionist who has lost 40kg herself.
           </p>
           <p className="text-gray-800 font-inter text-[13px] sm:text-[15px] font-bold underline decoration-solid underline-offset-auto decoration-from-font">
             Trusted by 5,000+ clients in the UAE since 2014
@@ -54,7 +52,7 @@ export default function WorkshopCard({ setModalControl }) {
         </div>
       </div>
       <div>
-        <h2 className="text-center italic text-[22px] font-inter font-semibold mt-4 text-white bg-[#221800] -mx-4">
+        <h2 className="text-center italic text-base font-inter font-semibold mt-4 text-white bg-[#221800] -mx-4">
           Free Wellness Webinar & Workshop
         </h2>
         <div className="flex items-center justify-center py-1 gap-1">
@@ -75,7 +73,7 @@ export default function WorkshopCard({ setModalControl }) {
               Venue Partner:{" "}
             </p>
             <p className="text-[#303030] font-medium font-inter">
-              'B Hub, Burjuman'
+              'B Hub, BurJuman'
             </p>
           </div>
 
