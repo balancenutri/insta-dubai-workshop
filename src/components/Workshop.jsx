@@ -99,6 +99,5 @@ export default function WorkshopCard({ setModalControl }) {
         No charges for the event. Refreshments will be provided*
       </p>
     </div>
-    // </div>
   );
 }
