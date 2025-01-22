@@ -15,6 +15,7 @@ const RazorpayPayment = ({ setModal }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneCode, setPhoneCode] = useState("");
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const apiUrl = import.meta.env.VITE_BACKEND_URL;
@@ -61,7 +62,9 @@ const RazorpayPayment = ({ setModal }) => {
     setPhoneCode(country.dialCode);
     setPhoneNumber(value.slice(country.dialCode.length));
 
-    const phoneWithCode = `+${country.dialCode}${value.slice(country.dialCode.length)}`;
+    const phoneWithCode = `+${country.dialCode}${value.slice(
+      country.dialCode.length
+    )}`;
     const fieldErrors = { ...errors };
 
     // Validate the phone number based on the country code
@@ -80,6 +83,7 @@ const RazorpayPayment = ({ setModal }) => {
     e.preventDefault();
 
     if (!validate()) return;
+    setLoading(true);
 
     const data = {
       name,
@@ -87,13 +91,13 @@ const RazorpayPayment = ({ setModal }) => {
       phone_code: phoneCode,
       phone: phoneNumber,
       currency: "INR",
-      amount : 0,
+      amount: 0,
       admin_id: 104,
     };
 
     try {
       const responses = await axios.post(api, data);
-      if(responses.data?.status == "success") {
+      if (responses.data?.status == "success") {
         navigate("/congrats", {
           state: {
             workshop_id: responses.data?.data?.workshop_id,
@@ -105,6 +109,8 @@ const RazorpayPayment = ({ setModal }) => {
       }
     } catch (error) {
       toast.error("Failed to submit the form. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -235,12 +241,14 @@ const RazorpayPayment = ({ setModal }) => {
             type="button"
             className="w-full py-2 bg-gray-400 text-white font-semibold rounded-lg hover:bg-gray-500 transition duration-300 ease-in-out"
             onClick={() => setModal(false)}
+            disabled={loading}
           >
             Back
           </button>
           <button
             type="submit"
             className="w-full py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out"
+            disabled={loading}
           >
             Register Now
           </button>
